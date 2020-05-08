@@ -21,7 +21,7 @@ import { extractClientCoordFromEvent } from './utils/extractClientCoordFromEvent
 import { notSupportedInOrthographicCamera } from './utils/notSupportedInOrthographicCamera';
 import { EventDispatcher } from './EventDispatcher';
 
-const isMac: boolean = /Mac/.test( navigator.platform );
+const isMac: boolean = typeof navigator !== 'undefined' && /Mac/.test( navigator.platform );
 const readonlyACTION = Object.freeze( ACTION );
 const TOUCH_DOLLY_FACTOR = 1 / 8;
 
